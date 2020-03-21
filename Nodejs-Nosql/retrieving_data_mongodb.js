@@ -11,14 +11,14 @@ mc.connect(url,function(err,db){
         console.log(result.name);
         db.close();
     });*/
-    dbo.collection("cust").find({},  //if find method with no parameter like find() this. will give us select * in mysql 
-        { projection:{        //first parameter in find() method is query, second parameter is projection where we can specify which key (IN key : value pair) will displayed i.e projected in result. if key is set to 0 will not be displayed and if 1 then display. we can't assign 0 and 1 at same time to diff key expect _id and other key.
+    dbo.collection("products").find({},  //if find method with no parameter like find() this. will give us select * in mysql 
+       /* { projection:{        //first parameter in find() method is query, second parameter is projection where we can specify which key (IN key : value pair) will displayed i.e projected in result. if key is set to 0 will not be displayed and if 1 then display. we can't assign 0 and 1 at same time to diff key expect _id and other key.
                     name: 1,
                     addr: 1,
                     _id: 0
             }
 
-        }).toArray(function(err,result){
+        }*/).toArray(function(err,result){
 
         if(err) throw err;
         console.log(result);

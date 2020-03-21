@@ -12,10 +12,10 @@ mc.connect(url,function(err,db){
         console.log("collection of cust created !!"); //display on terminal
         db.close();
     });*/
-    dbo.createCollection("server",function(err,res){ // created collection of name 'cust'
+    dbo.createCollection("order",function(err,res){ // created collection of name 'cust'
 
         if(err) throw err;
-        console.log("collection name 'server' created !!"); //display on terminal
+        console.log("collection name 'order' created !!"); //display on terminal
         db.close();
     });
 });
